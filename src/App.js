@@ -8,7 +8,11 @@ function App() {
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
-  const [hasAccount, setHasAccount] = useState(false);
+  const [userAuth, setUserAuth] = useState(false);
+
+  const loginHandler = () => {};
+
+  const registrationHandler = () => {};
 
   return (
     <div className="App">
