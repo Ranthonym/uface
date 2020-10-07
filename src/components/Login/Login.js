@@ -16,7 +16,6 @@ const Login = () => {
 
   return (
     <div className={classes.Login}>
-      <h1>User Login</h1>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
@@ -39,7 +38,15 @@ const Login = () => {
           />
         </Form.Group>
         <Button variant="primary" disabled={!validateForm()} type="submit">
-          Submit
+          Login
+        </Button>
+        <Button
+          className={classes.SignupButton}
+          variant="primary"
+          disabled={!validateForm()}
+          type="submit"
+        >
+          Signup
         </Button>
       </Form>
     </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import "./App.css";
+import classes from "./App.module.css";
 
 import { Jumbotron, Form, Button } from "react-bootstrap/";
 
@@ -19,9 +19,9 @@ function App() {
   const registrationHandler = () => {};
 
   return (
-    <div className="App">
+    <div className={classes.App}>
       <Jumbotron>
-        <h1>hello world</h1>
+        <h1>GigEco Code Challenge</h1>
         <Login />
       </Jumbotron>
     </div>
