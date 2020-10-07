@@ -5,6 +5,7 @@ import classes from "./App.module.css";
 import { Jumbotron, Form, Button } from "react-bootstrap/";
 
 import Login from "../src/components/Login/Login";
+import Signup from "../src/components/Signup/Signup";
 
 function App() {
   const [user, setUser] = useState("");
@@ -21,8 +22,9 @@ function App() {
   return (
     <div className={classes.App}>
       <Jumbotron>
-        <h1>GigEco Code Challenge</h1>
+        <h1 className={classes.AppHeader}> GigEco Code Challenge</h1>
         <Login />
+        <Signup />
       </Jumbotron>
     </div>
   );

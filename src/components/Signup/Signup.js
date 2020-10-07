@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
-import classes from "./Login.module.css";
+import classes from "./Signup.module.css";
 
-const Login = () => {
+const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -15,7 +15,7 @@ const Login = () => {
   }
 
   return (
-    <div className={classes.Login}>
+    <div className={classes.Signup}>
       <h1>User Login</h1>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="formBasicEmail">
@@ -46,4 +46,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;
