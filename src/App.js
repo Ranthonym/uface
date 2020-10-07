@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 
 import "./App.css";
 
+import { Jumbotron, Form, Button } from "react-bootstrap/";
+
+import Login from "../src/components/Login/Login";
+
 function App() {
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
@@ -16,7 +20,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hello let's do this</h1>
+      <Jumbotron>
+        <h1>hello world</h1>
+        <Login />
+      </Jumbotron>
     </div>
   );
 }
