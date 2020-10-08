@@ -16,6 +16,7 @@ function App() {
   const [hasAccount, setHasAccount] = useState(false);
 
   const loginHandler = () => {
+    clearError();
     fire
       .auth()
       .signInWithEmailAndPassword(email, password)
@@ -34,6 +35,7 @@ function App() {
   };
 
   const signupHandler = () => {
+    clearError();
     fire
       .auth()
       .createUserWithEmailAndPassword(email, password)
@@ -57,11 +59,26 @@ function App() {
   const authListener = () => {
     fire.auth().onAuthStateChanged((user) => {
       if (user) {
+        clearInputField();
         setUser(user);
       } else {
         setUser("");
       }
     });
+  };
+
+  useEffect(() => {
+    authListener();
+  }, []);
+
+  const clearInputField = () => {
+    setEmail("");
+    setPasswordError("");
+  };
+
+  const clearError = () => {
+    setEmailError("");
+    setPasswordError("");
   };
 
   return (
