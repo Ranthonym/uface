@@ -84,20 +84,23 @@ function App() {
   return (
     <div className={classes.App}>
       <Jumbotron>
-        <h1 className={classes.AppHeader}> GigEco Code Challenge</h1>
-        <Login
-          email={email}
-          setEmail={setEmail}
-          password={password}
-          setPassword={setPassword}
-          loginHandler={loginHandler}
-          signupHandler={signupHandler}
-          hasAccount={hasAccount}
-          setHasAccount={setHasAccount}
-          emailError={emailError}
-          passwordError={passwordError}
-        />
-        <UserPage logoutHandler={logoutHandler} />
+        <h1 className={classes.AppHeader}> UFace: A GigEco Code Challenge</h1>
+        {user ? (
+          <UserPage logoutHandler={logoutHandler} />
+        ) : (
+          <Login
+            email={email}
+            setEmail={setEmail}
+            password={password}
+            setPassword={setPassword}
+            loginHandler={loginHandler}
+            signupHandler={signupHandler}
+            hasAccount={hasAccount}
+            setHasAccount={setHasAccount}
+            emailError={emailError}
+            passwordError={passwordError}
+          />
+        )}
       </Jumbotron>
     </div>
   );
