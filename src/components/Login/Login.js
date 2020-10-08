@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Form, Button } from "react-bootstrap";
+import React from "react";
 import classes from "./Login.module.css";
 
 const Login = (props) => {
@@ -9,7 +8,7 @@ const Login = (props) => {
     password,
     setPassword,
     loginHandler,
-    signupHandle,
+    signupHandler,
     hasAccount,
     setHasAccount,
     emailError,
@@ -49,14 +48,16 @@ const Login = (props) => {
             <>
               <button onClick={loginHandler}>Sign in</button>
               <p>
-                Need an acount? <span>Sign up</span>
+                Need an acount?
+                <span onClick={() => setHasAccount(!hasAccount)}>Sign up</span>
               </p>
             </>
           ) : (
             <>
-              <button>Sign up</button>
+              <button onClick={signupHandler}>Sign up</button>
               <p>
-                Already have an account? <span>Login</span>
+                Already have an account?
+                <span onClick={() => setHasAccount(!hasAccount)}>Login</span>
               </p>
             </>
           )}
