@@ -16,12 +16,13 @@ const Signup = () => {
 
   return (
     <div className={classes.Signup}>
-      <h1>User Login</h1>
+      <h1>User Signup</h1>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
             autoFocus
+            data-ms-member="email"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -33,13 +34,14 @@ const Signup = () => {
           <Form.Label>Password</Form.Label>
           <Form.Control
             value={password}
+            data-ms-member="password"
             onChange={(e) => setPassword(e.target.value)}
             type="password"
             placeholder="Password"
           />
         </Form.Group>
         <Button variant="primary" disabled={!validateForm()} type="submit">
-          Login
+          Signup
         </Button>
       </Form>
     </div>

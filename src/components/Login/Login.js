@@ -21,6 +21,7 @@ const Login = () => {
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
+            data-ms-member="email"
             autoFocus
             type="email"
             value={email}
@@ -33,6 +34,7 @@ const Login = () => {
           <Form.Label>Password</Form.Label>
           <Form.Control
             value={password}
+            data-ms-member="password"
             onChange={(e) => setPassword(e.target.value)}
             type="password"
             placeholder="Password"
