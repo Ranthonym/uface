@@ -18,8 +18,9 @@ const Login = (props) => {
   return (
     <div className={classes.Login}>
       <div className={classes.LoginContainer}>
-        <label>Username</label>
+        <label className={classes.Label}>Username</label>
         <input
+          className={classes.Input}
           type="text"
           autoFocus
           required
@@ -27,8 +28,9 @@ const Login = (props) => {
           onChange={(e) => setEmail(e.target.value)}
         />
         <p className={classes.ErrorMsg}>{emailError}</p>
-        <label>Password</label>
+        <label className={classes.Label}>Password</label>
         <input
+          className={classes.Input}
           type="password"
           required
           value={password}
@@ -38,18 +40,32 @@ const Login = (props) => {
         <div className={classes.BtnContainer}>
           {hasAccount ? (
             <>
-              <button onClick={loginHandler}>Sign in</button>
-              <p>
+              <button className={classes.Button} onClick={loginHandler}>
+                Sign in
+              </button>
+              <p className={classes.SmallText}>
                 Need an acount?
-                <span onClick={() => setHasAccount(!hasAccount)}>Sign up</span>
+                <span
+                  className={classes.ToggleText}
+                  onClick={() => setHasAccount(!hasAccount)}
+                >
+                  Sign up
+                </span>
               </p>
             </>
           ) : (
             <>
-              <button onClick={signupHandler}>Sign up</button>
-              <p>
+              <button className={classes.Button} onClick={signupHandler}>
+                Sign up
+              </button>
+              <p className={classes.SmallText}>
                 Already have an account?
-                <span onClick={() => setHasAccount(!hasAccount)}>Login</span>
+                <span
+                  className={classes.ToggleText}
+                  onClick={() => setHasAccount(!hasAccount)}
+                >
+                  Login
+                </span>
               </p>
             </>
           )}

@@ -1,13 +1,86 @@
 .Login {
-  max-width: 25%;
   margin: auto;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 20px;
   display: flex;
-  flex-direction: column;
-  border: 3px solid green;
-  padding: 10px;
+  background: radial-gradient(
+    ellipse at left bottom,
+    rgb(121, 125, 129) 0%,
+    rgba(2, 0, 5, 0.9) 59%,
+    rgba(168, 152, 152, 0.9) 100%
+  );
 }
 
-.SignupButton {
-  margin-left: 10px;
-  background-color: blueviolet;
+.LoginContainer {
+  padding: 60px;
+  margin: auto;
+  width: 100%;
+  max-width: 520px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: radial-gradient(
+    ellipse at left bottom,
+    rgb(21, 106, 204) 0%,
+    rgba(2, 0, 5, 0.9) 59%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+  box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.8);
+}
+
+.Button {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 15px 0;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  background: #603bbb;
+  cursor: pointer;
+}
+
+.Input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 19px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.Label {
+  color: white;
+  margin: 14px 0;
+  display: block;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.SmallText {
+  margin: 14px 0 0 0;
+  text-align: right;
+  color: #fff;
+}
+
+.ToggleText {
+  color: yellow;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: all 400ms ease-in-out;
+}
+
+.ToggleText:hover {
+  color: red;
+}
+
+.ErrorMsg {
+  color: red;
+  font-size: 16px;
 }

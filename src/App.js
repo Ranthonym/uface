@@ -83,10 +83,10 @@ function App() {
 
   return (
     <div className={classes.App}>
-      <Jumbotron>
+      <Jumbotron className={classes.Jumbotron}>
         <h1 className={classes.AppHeader}> UFace: A GigEco Code Challenge</h1>
         {user ? (
-          <UserPage logoutHandler={logoutHandler} />
+          <UserPage email={email} logoutHandler={logoutHandler} />
         ) : (
           <Login
             email={email}
