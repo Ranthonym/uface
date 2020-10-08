@@ -5,15 +5,6 @@
   background-color: grey;
 }
 
-/* .JumboTron {
-  background: radial-gradient(
-    ellipse at left bottom,
-    rgb(21, 106, 204) 0%,
-    rgba(2, 0, 5, 0.9) 59%,
-    rgba(0, 0, 0, 0.9) 100%
-  );
-} */
-
 .AppHeader {
   color: #111;
   background: #603bbb;

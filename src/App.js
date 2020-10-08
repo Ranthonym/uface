@@ -2,10 +2,9 @@ import React, { useState, useEffect } from "react";
 import fire from "./fire";
 
 import classes from "./App.module.css";
-import { Jumbotron, Form, Button } from "react-bootstrap/";
 
 import Login from "../src/components/Login/Login";
-import UserPage from "./UserPage";
+import UserPage from "./components/UserPage/UserPage";
 
 function App() {
   const [user, setUser] = useState("");
@@ -73,7 +72,7 @@ function App() {
 
   const clearInputField = () => {
     setEmail("");
-    setPasswordError("");
+    setPassword("");
   };
 
   const clearError = () => {
@@ -83,25 +82,23 @@ function App() {
 
   return (
     <div className={classes.App}>
-      <Jumbotron className={classes.Jumbotron}>
-        <h1 className={classes.AppHeader}> UFace: A GigEco Code Challenge</h1>
-        {user ? (
-          <UserPage email={email} logoutHandler={logoutHandler} />
-        ) : (
-          <Login
-            email={email}
-            setEmail={setEmail}
-            password={password}
-            setPassword={setPassword}
-            loginHandler={loginHandler}
-            signupHandler={signupHandler}
-            hasAccount={hasAccount}
-            setHasAccount={setHasAccount}
-            emailError={emailError}
-            passwordError={passwordError}
-          />
-        )}
-      </Jumbotron>
+      <h1 className={classes.AppHeader}> UFace: A GigEco Code Challenge</h1>
+      {user ? (
+        <UserPage email={email} logoutHandler={logoutHandler} />
+      ) : (
+        <Login
+          email={email}
+          setEmail={setEmail}
+          password={password}
+          setPassword={setPassword}
+          loginHandler={loginHandler}
+          signupHandler={signupHandler}
+          hasAccount={hasAccount}
+          setHasAccount={setHasAccount}
+          emailError={emailError}
+          passwordError={passwordError}
+        />
+      )}
     </div>
   );
 }
