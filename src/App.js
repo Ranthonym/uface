@@ -5,7 +5,7 @@ import classes from "./App.module.css";
 import { Jumbotron, Form, Button } from "react-bootstrap/";
 
 import Login from "../src/components/Login/Login";
-// import Signup from "../src/components/Signup/Signup";
+import UserPage from "./UserPage";
 
 function App() {
   const [user, setUser] = useState("");
@@ -97,6 +97,7 @@ function App() {
           emailError={emailError}
           passwordError={passwordError}
         />
+        <UserPage logoutHandler={logoutHandler} />
       </Jumbotron>
     </div>
   );

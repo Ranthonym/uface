@@ -15,14 +15,6 @@ const Login = (props) => {
     passwordError,
   } = props;
 
-  function validateForm() {
-    return email.length > 0 && password.length > 0;
-  }
-
-  function handleSubmit(event) {
-    event.preventDefault();
-  }
-
   return (
     <div className={classes.Login}>
       <div className={classes.LoginContainer}>
